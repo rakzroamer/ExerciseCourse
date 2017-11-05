@@ -1,0 +1,25 @@
+smallest = None
+largest  = None
+while True:
+    snum = input("Enter a number: ")
+    if snum == 'done': break
+    else:
+        try:
+            inum = int(snum)
+        except:
+            print("Invalid input")
+            continue
+
+    if smallest is None:
+        smallest = inum
+    elif inum < smallest:
+        smallest = inum
+
+    if largest is None:
+        largest = inum
+    elif inum > largest:
+        largest = inum
+
+    #print("Minimum is",inum)
+print("Maximum is",largest)
+print("Minimum is",smallest)
